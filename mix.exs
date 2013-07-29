@@ -10,18 +10,23 @@ defmodule PusherProto.Mixfile do
 
   # Configuration for the OTP application
   def application do
-    [mod: { PusherProto, [] },
-     applications: [:ranch, :cowboy],
-     env: [pools: [{:python_pool,
+    [ mod: { PusherProto, [] },
+      applications: [:ranch, :cowboy],
+      env: [pools: [{:python_pool,
                     [size: 10, max_overflow: 20],
-                    [python_path: 'priv/python']}]]]
+                    [python_path: 'priv/python',
+                     env: [{'URBAN_KEY', 'key'},
+                           {'URBAN_SECRET', 'secret'}]]}]] ]
   end
 
   # Returns the list of dependencies in the format:
   # { :foobar, "0.1", git: "https://github.com/elixir-lang/foobar.git" }
   defp deps do
-    [{:cowboy, github: "extend/cowboy"},
+    [
+     {:cowboy, github: "extend/cowboy"},
      {:erlport, github: "hdima/erlport"},
-     {:poolboy, github: "devinus/poolboy"}]
+     {:poolboy, github: "devinus/poolboy"},
+     {:jsex, github: "talentdeficit/jsex"}
+    ]
   end
 end
