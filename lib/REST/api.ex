@@ -9,7 +9,10 @@ defmodule PusherProto.REST.API do
     {:ok, body, req} = :cowboy_req.body(req)
     body = JSEX.decode! body
     email = ListDict.get body, "email"
-    _pid = spawn(PusherProto.Exec, :push, [email])
+    center_id = ListDict.get body, "center_id"
+    obj_number = ListDict.get body, "object_number"
+
+    _pid = spawn(PusherProto.Exec, :push, [email, center_id, obj_number])
     {true, req, state}
   end
 

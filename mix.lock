@@ -1,5 +1,7 @@
 [ "cowboy": {:git, "git://github.com/extend/cowboy.git", "5e5d8ab299a451ffbf0552bc2190a5fcbec08c16", []},
   "erlport": {:git, "git://github.com/hdima/erlport.git", "2bd9f3777317d3a6e2e474c1c91bbf29892c0bdc", []},
+  "httpotion": {:git, "git://github.com/myfreeweb/httpotion.git", "bc4f83ed0e433db3e1f7dbfb6377210990a35635", []},
+  "ibrowse": {:git, "git://github.com/cmullaparthi/ibrowse.git", "208277b69fa9cc1b68f37d1261a77abe6487a677", []},
   "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "e870b17fe168f5cc87505c88e578858532bd0d66", []},
   "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "352d6b21cbec4fe1b66bc7ce3ded67a3b32add2c", [{:tag, "v1.4.2"}]},
   "poolboy": {:git, "git://github.com/devinus/poolboy.git", "91b68de43d49bcccf2631016febda70b20d7aa75", []},

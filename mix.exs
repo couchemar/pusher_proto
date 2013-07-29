@@ -26,7 +26,8 @@ defmodule PusherProto.Mixfile do
      {:cowboy, github: "extend/cowboy"},
      {:erlport, github: "hdima/erlport"},
      {:poolboy, github: "devinus/poolboy"},
-     {:jsex, github: "talentdeficit/jsex"}
+     {:jsex, github: "talentdeficit/jsex"},
+     {:httpotion, github: "myfreeweb/httpotion"}
     ]
   end
 end
